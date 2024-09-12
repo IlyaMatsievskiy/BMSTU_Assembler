@@ -1,0 +1,15 @@
+.MODEL SMALL
+.STACK 100h
+.DATA
+
+.CODE
+MAIN PROC
+    MOV AX, -5    ; Загружаем -5 в AX
+    ADD AX, -3    ; Добавляем -3 к значению в AX
+
+    ; Здесь AX теперь содержит -8
+
+    MOV AH, 4Ch   ; Функция выхода DOS
+    INT 21h       ; Вызов прерывания DOS для выхода из программы
+MAIN ENDP
+END MAIN
